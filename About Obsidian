@@ -1,0 +1,443 @@
+{
+  "runSettings": {
+    "temperature": 1.0,
+    "model": "models/gemini-2.5-pro",
+    "topP": 0.95,
+    "topK": 64,
+    "maxOutputTokens": 65536,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "OFF"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "OFF"
+    }],
+    "enableCodeExecution": false,
+    "enableSearchAsATool": true,
+    "enableBrowseAsATool": false,
+    "enableAutoFunctionResponse": false,
+    "thinkingBudget": -1,
+    "googleSearch": {
+    }
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "role": "user",
+      "youtubeVideo": {
+        "id": "diZ4AFh-ZNI"
+      },
+      "tokenCount": 320958
+    }, {
+      "text": " 請詳述此視頻所提yaml",
+      "role": "user",
+      "tokenCount": 9
+    }, {
+      "text": "**Initiating YAML Understanding**\n\nI\u0027ve started by watching the video about YAML in Obsidian. I\u0027m focusing on grasping the core concepts as they relate to Obsidian\u0027s use of YAML, especially regarding metadata. I anticipate this foundational knowledge will be key to further investigation.\n\n\n**Analyzing Obsidian YAML Use**\n\nI\u0027m now zeroing in on the essential features of Obsidian YAML, such as how it handles metadata and works with Dataview. Understanding the formatting, templates, and search abilities within Obsidian\u0027s YAML implementation is becoming clearer. I\u0027m taking note of both the advantages and disadvantages of using YAML properties in this context. I\u0027m also capturing the common errors highlighted in the video to better understand what to avoid, which is useful.\n\n\n",
+      "role": "model",
+      "tokenCount": 173,
+      "isThought": true,
+      "thinkingBudget": -1,
+      "thoughtSignatures": ["", ""],
+      "parts": [{
+        "text": "**Initiating YAML Understanding**\n\nI\u0027ve started by watching the video about YAML in Obsidian. I\u0027m focusing on grasping the core concepts as they relate to Obsidian\u0027s use of YAML, especially regarding metadata. I anticipate this foundational knowledge will be key to further investigation.\n\n\n",
+        "thought": true
+      }, {
+        "text": "**Analyzing Obsidian YAML Use**\n\nI\u0027m now zeroing in on the essential features of Obsidian YAML, such as how it handles metadata and works with Dataview. Understanding the formatting, templates, and search abilities within Obsidian\u0027s YAML implementation is becoming clearer. I\u0027m taking note of both the advantages and disadvantages of using YAML properties in this context. I\u0027m also capturing the common errors highlighted in the video to better understand what to avoid, which is useful.\n\n\n",
+        "thought": true
+      }]
+    }, {
+      "text": "好的，這是有關此影片中提到的 YAML 的詳細摘要。\n\n這段影片 \"Stop Wasting Time in Obsidian :: Mastering YAML Properties\" 主要在教導觀眾如何在 Obsidian 筆記軟體中使用 YAML (YAML Ain\u0027t Markup Language) 屬性來更有效率地組織和管理筆記。\n\n### **什麼是 Obsidian YAML？**\n\nObsidian YAML 是指在 Obsidian 筆記的頂部使用 YAML front matter 來加入元數據 (metadata)。這是一種標準化的方式，格式簡單易讀，可以幫助使用者儲存關於筆記的結構化資訊。\n\n### **Obsidian YAML 的主要功能**\n\n影片中提到了 YAML 的幾項關鍵功能：\n\n*   **元數據儲存 (Metadata Storage):** YAML 允許使用者儲存關於筆記的結構化數據，例如標題、標籤 (Tags)、類別 (Categories)、日期 (Dates) 等相關屬性。這有助於更有效地組織和管理筆記。\n*   **格式化 (Formatting):** YAML front matter 通常被兩組三個連字號 (`---`) 包圍，其中每一行都對應一個鍵值對 (key-value pair)。\n*   **與 Dataview 整合 (Integration with Dataview):** YAML 屬性與 Obsidian 的 Dataview 插件結合使用時特別有用。使用者可以透過定義結構化的元數據，來查詢、篩選、視覺化筆記，並建立表格、列表等。\n*   **模板與一致性 (Templates and Consistency):** 使用者可以建立包含預定義 YAML 屬性的模板，確保每則筆記都遵循一致的結構，這有助於在整個筆記庫中維持組織性。\n*   **搜尋與組織 (Search and Organisation):** 透過利用 YAML，使用者可以更有效地篩選、搜尋和組織大量的筆記，實現進階查詢和更輕鬆的管理。\n\n### **使用 YAML 的優缺點**\n\n**優點 (Pros):**\n*   **結構化元數據:** 允許清晰地定義筆記的相關資訊。\n*   **與 Dataview 整合:** 可無縫地與強大的查詢插件 Dataview 協作。\n*   **提升搜尋能力:** 讓使用者能根據標籤、類別等條件進行精確篩選。\n*   **一致性與標準化:** 透過模板確保筆記格式統一。\n*   **客製化:** 使用者可以根據自身需求定義鍵值對。\n*   **易於使用:** YAML 語法對人類來說易於閱讀和編輯。\n\n**缺點 (Cons):**\n*   **學習曲線:** 新手需要時間來熟悉 YAML 的語法和在 Obsidian 中的應用。\n*   **可能出錯:** 格式上的小錯誤（如縮排不正確）可能導致 YAML 無法被辨識。\n*   **在大型筆記中可能變得雜亂:** 如果元數據過多，可能會影響筆記內容的可讀性。\n*   **依賴插件:** 要完全發揮 YAML 的優勢，通常需要依賴像 Dataview 這類的插件。\n*   **增加設定時間:** 建立模板和屬性需要投入前期時間。\n\n### **創作者的錯誤與最佳實踐**\n\n影片的創作者分享了他一開始使用 Obsidian 時的錯誤。他最初是將元數據直接寫在筆記內文中，而不是使用 YAML front matter。這導致了當他後來想使用 Dataview 插件來查詢筆記時，無法有效地抓取到這些非結構化的資訊，因而需要花費大量時間回去修改舊筆記。\n\n**最佳實踐 (Best Practices):**\n*   **從一開始就使用 YAML:** 即使你目前還不知道會如何使用這些元數據，也建議從一開始就在筆記中加入 YAML 屬性。\n*   **建立標準化模板:** 為不同類型的筆記（例如書籍、作者、會議記錄）建立帶有標準化 YAML 屬性的模板，可以節省未來大量的時間。\n\n### **如何建立 YAML 屬性**\n\n影片中也示範了如何在 Obsidian 中建立 YAML 屬性：\n\n1.  **啟用屬性檢視:** 確保在核心插件 (Core plugins) 中啟用了 \"Properties view\" 功能。\n2.  **設定屬性顯示方式:** 在編輯器 (Editor) 設定中，將 \"Properties in document\" 設為 \"Visible\" 或 \"Source\"，以便在筆記頂部看到 YAML 區塊。\n3.  **新增屬性:**\n    *   可以使用快捷鍵 `Ctrl + ;` (Windows/Linux) 或 `Cmd + ;` (Mac) 來新增屬性。\n    *   也可以直接點擊 \"Add property\" 按鈕。\n4.  **選擇屬性類型:** Obsidian 支援多種屬性類型，包括：\n    *   Text (文字)\n    *   List (列表)\n    *   Number (數字)\n    *   Checkbox (核取方塊)\n    *   Date (日期)\n    *   Date \u0026 Time (日期與時間)\n5.  **內聯元數據 (Inline Metadata):** 影片也提到，可以在筆記內文中用 `key:: value` 的格式來加入內聯元數據，這同樣可以被 Dataview 查詢，但不會顯示在 YAML 屬性區域。\n\n總而言之，這部影片強調，儘早並正確地使用 YAML 屬性來結構化筆記，是充分利用 Obsidian 強大功能、節省未來時間的關鍵。",
+      "role": "model",
+      "finishReason": "STOP",
+      "tokenCount": 1209,
+      "parts": [{
+        "text": "好的，這是有關此影片中提到的 YAML 的詳細摘要。"
+      }, {
+        "text": "\n\n這段影片 \"Stop Wasting Time in Obsidian :: Mastering YAML Properties\" 主要在教導觀眾如何在 Obsidian 筆"
+      }, {
+        "text": "記軟體中使用 YAML (YAML Ain\u0027t Markup Language) 屬性來更有效率地組織和管理筆"
+      }, {
+        "text": "記。\n\n### **什麼是 Obsidian YAML？**\n\nObsidian YAML 是指在 Obsidian 筆記的頂部"
+      }, {
+        "text": "使用 YAML front matter 來加入元數據 (metadata)。這是一種標準化的方式，格式簡單易讀，可以幫助使用者儲"
+      }, {
+        "text": "存關於筆記的結構化資訊。\n\n### **Obsidian YAML 的主要功能**\n\n影片中提到了 YAML 的"
+      }, {
+        "text": "幾項關鍵功能：\n\n*   **元數據儲存 (Metadata Storage):** YAML 允許使用者儲存關於筆記"
+      }, {
+        "text": "的結構化數據，例如標題、標籤 (Tags)、類別 (Categories)、日期 (Dates) 等"
+      }, {
+        "text": "相關屬性。這有助於更有效地組織和管理筆記。\n*   **格式化 (Formatting):"
+      }, {
+        "text": "** YAML front matter 通常被兩組三個連字號 (`---`) 包圍，其中每一行都對應一個"
+      }, {
+        "text": "鍵值對 (key-value pair)。\n*   **與 Dataview 整合 (Integration with Dataview):"
+      }, {
+        "text": "** YAML 屬性與 Obsidian 的 Dataview 插件結合使用時特別有用。使用者可以透過定義結構"
+      }, {
+        "text": "化的元數據，來查詢、篩選、視覺化筆記，並建立表格、列表等。\n*   **"
+      }, {
+        "text": "模板與一致性 (Templates and Consistency):** 使用者可以建立包含預定義 YAML 屬性的模板，確保每"
+      }, {
+        "text": "則筆記都遵循一致的結構，這有助於在整個筆記庫中維持組織性。\n*"
+      }, {
+        "text": "   **搜尋與組織 (Search and Organisation):** 透過利用 YAML，使用者可以更有效地篩選、搜尋"
+      }, {
+        "text": "和組織大量的筆記，實現進階查詢和更輕鬆的管理。\n\n### **使用 YAML 的優缺點**\n\n**"
+      }, {
+        "text": "優點 (Pros):**\n*   **結構化元數據:** 允許清晰地定義筆記的相關"
+      }, {
+        "text": "資訊。\n*   **與 Dataview 整合:** 可無縫地與強大的查詢插件 Dataview 協"
+      }, {
+        "text": "作。\n*   **提升搜尋能力:** 讓使用者能根據標籤、類別等條件進行精確篩"
+      }, {
+        "text": "選。\n*   **一致性與標準化:** 透過模板確保筆記格式統一。\n*   "
+      }, {
+        "text": "**客製化:** 使用者可以根據自身需求定義鍵值對。\n*   **易於使用:** YAML"
+      }, {
+        "text": " 語法對人類來說易於閱讀和編輯。\n\n**缺點 (Cons):**\n*   **學習曲線:**"
+      }, {
+        "text": " 新手需要時間來熟悉 YAML 的語法和在 Obsidian 中的應用。\n*   **可能出錯:**"
+      }, {
+        "text": " 格式上的小錯誤（如縮排不正確）可能導致 YAML 無法被辨識。\n*   **在"
+      }, {
+        "text": "大型筆記中可能變得雜亂:** 如果元數據過多，可能會影響筆記內容的可讀性。"
+      }, {
+        "text": "\n*   **依賴插件:** 要完全發揮 YAML 的優勢，通常需要依賴像 Dataview 這"
+      }, {
+        "text": "類的插件。\n*   **增加設定時間:** 建立模板和屬性需要投入前期時間。\n\n### **"
+      }, {
+        "text": "創作者的錯誤與最佳實踐**\n\n影片的創作者分享了他一開始使用 Obsidian 時的錯誤。"
+      }, {
+        "text": "他最初是將元數據直接寫在筆記內文中，而不是使用 YAML front matter。這導致了當"
+      }, {
+        "text": "他後來想使用 Dataview 插件來查詢筆記時，無法有效地抓取到這些非結構化的資訊"
+      }, {
+        "text": "，因而需要花費大量時間回去修改舊筆記。\n\n**最佳實踐 (Best Practices):**\n"
+      }, {
+        "text": "*   **從一開始就使用 YAML:** 即使你目前還不知道會如何使用這些元數據，也"
+      }, {
+        "text": "建議從一開始就在筆記中加入 YAML 屬性。\n*   **建立標準化模板:** 為"
+      }, {
+        "text": "不同類型的筆記（例如書籍、作者、會議記錄）建立帶有標準化 YAML 屬性的模板，"
+      }, {
+        "text": "可以節省未來大量的時間。\n\n### **如何建立 YAML 屬性**\n\n影片中也示範了如何在"
+      }, {
+        "text": " Obsidian 中建立 YAML 屬性：\n\n1.  **啟用屬性檢視:** 確保在核心插件"
+      }, {
+        "text": " (Core plugins) 中啟用了 \"Properties view\" 功能。\n2.  **設定屬性顯示方式:** 在編輯器"
+      }, {
+        "text": " (Editor) 設定中，將 \"Properties in document\" 設為 \"Visible\" 或 \"Source\"，以便在筆記"
+      }, {
+        "text": "頂部看到 YAML 區塊。\n3.  **新增屬性:**\n    *   可以使用快捷鍵 `Ctrl"
+      }, {
+        "text": " + ;` (Windows/Linux) 或 `Cmd + ;` (Mac) 來新增屬性。\n    *   也可以"
+      }, {
+        "text": "直接點擊 \"Add property\" 按鈕。\n4.  **選擇屬性類型:** Obsidian 支援多種屬"
+      }, {
+        "text": "性類型，包括：\n    *   Text (文字)\n    *   List (列表)\n    *"
+      }, {
+        "text": "   Number (數字)\n    *   Checkbox (核取方塊)\n    *   Date (日期)\n    "
+      }, {
+        "text": "*   Date \u0026 Time (日期與時間)\n5.  **內聯元數據 (Inline Metadata):** "
+      }, {
+        "text": "影片也提到，可以在筆記內文中用 `key:: value` 的格式來加入內聯元數據，這"
+      }, {
+        "text": "同樣可以被 Dataview 查詢，但不會顯示在 YAML 屬性區域。\n\n總而言之，"
+      }, {
+        "text": "這部影片強調，儘早並正確地使用 YAML 屬性來結構化筆記，是充分利用 Obsidian 強"
+      }, {
+        "text": "大功能、節省未來時間的關鍵。"
+      }]
+    }, {
+      "text": "請說明pluhin Excalidraw",
+      "role": "user",
+      "tokenCount": 10
+    }, {
+      "text": "about Obsidian, 請說明pluhin Excalidraw",
+      "role": "user",
+      "tokenCount": 13
+    }, {
+      "text": "**Beginning Research on Excalidraw**\n\nI\u0027ve initiated the search process. My initial queries, focusing on the Obsidian Excalidraw plugin, its features, and usage within Obsidian, are underway. I\u0027ll be sifting through the results to better understand the nuances of this integration.\n\n\n**Formulating Initial Search Queries**\n\nI\u0027m now formulating search queries to gather information on the Obsidian Excalidraw plugin. My queries will include \"Obsidian Excalidraw plugin,\" \"Excalidraw for Obsidian features,\" \"how to use Excalidraw in Obsidian,\" and \"Obsidian Excalidraw plugin tutorial.\" The aim is to understand the plugin, its features, integration with Obsidian, and typical uses before synthesizing the data in Traditional Chinese.\n\n\n",
+      "role": "model",
+      "tokenCount": 119,
+      "isThought": true,
+      "thinkingBudget": -1,
+      "thoughtSignatures": ["", ""],
+      "parts": [{
+        "text": "**Beginning Research on Excalidraw**\n\nI\u0027ve initiated the search process. My initial queries, focusing on the Obsidian Excalidraw plugin, its features, and usage within Obsidian, are underway. I\u0027ll be sifting through the results to better understand the nuances of this integration.\n\n\n",
+        "thought": true
+      }, {
+        "text": "**Formulating Initial Search Queries**\n\nI\u0027m now formulating search queries to gather information on the Obsidian Excalidraw plugin. My queries will include \"Obsidian Excalidraw plugin,\" \"Excalidraw for Obsidian features,\" \"how to use Excalidraw in Obsidian,\" and \"Obsidian Excalidraw plugin tutorial.\" The aim is to understand the plugin, its features, integration with Obsidian, and typical uses before synthesizing the data in Traditional Chinese.\n\n\n",
+        "thought": true
+      }]
+    }, {
+      "text": "好的，這是有關 Obsidian 的 Excalidraw 插件的詳細說明。\n\nExcalidraw 是一款功能強大且廣受歡迎的社群插件，它將 Excalidraw 這套開源的虛擬白板（或稱手繪風格繪圖工具）無縫整合進 Obsidian 中。這讓使用者可以直接在自己的筆記庫 (Vault) 內建立、編輯和管理視覺化的圖表與筆記，實現了文字與視覺元素的完美結合。\n\n### **Excalidraw 插件的核心功能**\n\n1.  **原生整合與檔案管理**\n    *   **像筆記一樣管理：** Excalidraw 繪圖會以 `.excalidraw.md` 或 `.md` 的檔案格式直接儲存在你的 Obsidian 筆記庫中，你可以像管理一般 Markdown 筆記一樣，使用檔案總管來移動、重新命名或組織它們。\n    *   **無縫的工作流程：** 插件深度整合了 Obsidian 的操作介面，包括命令面板 (Command Palette)、右鍵選單、檔案總管以及側邊欄按鈕，讓建立或開啟繪圖非常直觀。\n\n2.  **強大的連結與嵌入能力 (Linking \u0026 Embedding)**\n    *   **雙向連結：** 你可以在 Excalidraw 畫布中，使用 `[[筆記名稱]]` 的語法，直接連結到 Obsidian 筆記庫中的任何一篇筆記或另一張繪圖。\n    *   **區塊引用 (Block Reference)：** 不僅可以連結整篇筆記，還能精確地引用筆記中的某個段落、標題或項目，並將其嵌入到畫布中。\n    *   **反向連結 (Backlinks)：** Obsidian 強大的反向連結功能同樣適用於 Excalidraw。你可以在筆記的反向連結面板中，看到有哪些繪圖引用了這篇筆記。\n    *   **嵌入繪圖到筆記中：** 你可以將整張繪圖或繪圖中的特定「群組」(Group) 嵌入到你的 Markdown 筆記中，只顯示你想呈現的部分。嵌入的圖像大小也可以自由調整。\n\n3.  **豐富的視覺化與互動功能**\n    *   **Markdown 嵌入：** 你可以將一篇完整的 Markdown 筆記內容嵌入到畫布中，它會以渲染後的樣式呈現，包括表格、程式碼區塊等。\n    *   **拖放支援：** 支援從各種地方拖放元素到畫布上，例如：\n        *   從檔案總管拖曳筆記，會自動生成連結。\n        *   拖放文字內容會變成畫布上的文字。\n        *   拖放網頁連結、YouTube 影片連結，會生成可點擊的連結或帶有預覽圖的影片。\n    *   **圖像與 PDF 整合：** 你可以插入本地或網路上的圖片，甚至能將 PDF 的某一頁匯入成圖片並在上面做註記。 這些註記可以連結回原始的 PDF 頁面。\n\n4.  **高度客製化與自動化**\n    *   **模板 (Templates)：** 可以建立繪圖模板，快速生成常用的圖表框架，例如會議記錄、心智圖等。\n    *   **腳本引擎 (Script Engine)：** 這是 Excalidraw 最強大的功能之一。使用者可以安裝或撰寫腳本來自動化各種繪圖任務，例如：\n        *   將 Mermaid 語法轉換成圖表。\n        *   自動排列元素、生成圖表等。\n    *   **Excalidraw Automate API：** 提供了與 Templater、Dataview、QuickAdd 等其他強大插件協作的接口，可以實現非常複雜的自動化工作流程。\n\n### **為什麼要在 Obsidian 中使用 Excalidraw？**\n\n*   **視覺化思考：** 對於習慣視覺化思考的人來說，Excalidraw 提供了將抽象概念具象化的絕佳工具，例如繪製心智圖、流程圖、概念關係圖等。\n*   **混合式筆記：** Excalidraw 插件允許你建立「混合式筆記」(Hybrid Notes)，也就是一篇筆記同時擁有文字和視覺兩種模式，可以隨時切換。就像一張紙的正反面，一面是手繪圖，另一面是詳細的文字說明。\n*   **提升記憶與理解：** 在筆記中加入圖表和草圖，可以顯著提升對複雜資訊的記憶和理解。\n*   **保持資料的本地化與隱私：** 所有的繪圖檔案都儲存在你自己的設備上，與 Obsidian 的核心理念一致，確保了資料的隱私和所有權。\n\n### **如何開始使用**\n\n1.  **安裝插件：** 從 Obsidian 的社群插件市集中搜尋 \"Excalidraw\" 並安裝。\n2.  **啟用插件：** 安裝後記得啟用它。\n3.  **建立新繪圖：** 你可以透過左側邊欄的按鈕、命令面板或在檔案總管中右鍵點擊來建立一個新的繪圖檔案。\n\n總而言之，Excalidraw 插件不僅僅是一個簡單的繪圖工具，它是一個能將 Obsidian 從純文字筆記軟體提升為強大視覺化知識管理系統的「思考 powerhouse」。 無論是 brainstorm、規劃流程、註記圖片，或是建立互動式的圖表，它都為 Obsidian 使用者開啟了全新的可能性。",
+      "role": "model",
+      "grounding": {
+        "corroborationSegments": [{
+          "index": 411,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGmG9dZlumckWVmfR20dOfYw3HLF6eT6KFoMETqtWoTb076qr8cxV7zq4b-QEKa5UzlWCit7nDJWaz1DGmaYKgvIIgyEnlTRQipf6UASu83YoDrD0UsZIWOO3zouZrdMhaZn7kN-ZUQdZUrFcUfN5T9h0w%3D",
+          "footnoteNumber": 1
+        }, {
+          "index": 411,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQE62xkCCLxOPQ2dVM9QwV0UgGvqMf3C83J_PNV8xS2OZr9usnmrJBRLJ6nDE7qF4iKkR-awldTp8Xxph3ygUMwwdAQmjdOgPAwEL3NYMaqdeNE9p0VADbaj_9Lf3JUXMy3ckdx-HaFjTelMVRk0-Zl3_XFmCkk8ik85Y1U%3D",
+          "footnoteNumber": 2
+        }, {
+          "index": 749,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGmG9dZlumckWVmfR20dOfYw3HLF6eT6KFoMETqtWoTb076qr8cxV7zq4b-QEKa5UzlWCit7nDJWaz1DGmaYKgvIIgyEnlTRQipf6UASu83YoDrD0UsZIWOO3zouZrdMhaZn7kN-ZUQdZUrFcUfN5T9h0w%3D",
+          "footnoteNumber": 1
+        }, {
+          "index": 965,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGmG9dZlumckWVmfR20dOfYw3HLF6eT6KFoMETqtWoTb076qr8cxV7zq4b-QEKa5UzlWCit7nDJWaz1DGmaYKgvIIgyEnlTRQipf6UASu83YoDrD0UsZIWOO3zouZrdMhaZn7kN-ZUQdZUrFcUfN5T9h0w%3D",
+          "footnoteNumber": 1
+        }, {
+          "index": 1209,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "footnoteNumber": 3
+        }, {
+          "index": 1385,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "footnoteNumber": 4
+        }, {
+          "index": 1581,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "footnoteNumber": 3
+        }, {
+          "index": 1802,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "footnoteNumber": 4
+        }, {
+          "index": 2019,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "footnoteNumber": 3
+        }, {
+          "index": 2105,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGmG9dZlumckWVmfR20dOfYw3HLF6eT6KFoMETqtWoTb076qr8cxV7zq4b-QEKa5UzlWCit7nDJWaz1DGmaYKgvIIgyEnlTRQipf6UASu83YoDrD0UsZIWOO3zouZrdMhaZn7kN-ZUQdZUrFcUfN5T9h0w%3D",
+          "footnoteNumber": 1
+        }, {
+          "index": 2497,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGQ3bCJe-Ok8SJQZjf6Gpwz4YXjNDsNZSfMt4eNCnBy9s8ERTSkwlXnk5y120obHj_A5fu7iW48CQzHpcISgyNLkktAsfw1v6yARMFxwL6z2yCWBBxMhLiqLnG2t5pUfi7UhGgs3wCS_mCGbBGO7zkIaImelk7P1WlVq09AC2yCj79-oUVWiNEvH-EG4IE_qV1x7W30l_0lK1VT7RBJFBNbBmUodQtd606UQFkb",
+          "footnoteNumber": 5
+        }, {
+          "index": 2497,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQE1unrkz3QtY8owLOJBv_4FQ2b8Wts3q2VkC0tgvxikU3G-7iP_4OLOPZJBbuAx8CweJfDW_HnNHaKr0cVYVoqFrO-UfltU76ZgKIqw7ot5nZw74yBurql6wH5-HyK3AWI5iFFRAbt-zE-JYudmUe8eZ4c_sHAhpdlOKGY1kQnA1_gGVbOmCXdSQH05fs6fL8ZihOzkUv5cfnXkUMmxW1otXiCcRjk1IN60xLeK",
+          "footnoteNumber": 6
+        }, {
+          "index": 2548,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "footnoteNumber": 4
+        }, {
+          "index": 2719,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "footnoteNumber": 4
+        }, {
+          "index": 2887,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "footnoteNumber": 3
+        }, {
+          "index": 3163,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "footnoteNumber": 3
+        }, {
+          "index": 3411,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHe0SE3oUhH9DX2YIZE_IGt5k4druqDA8S9MyHPb-BpOyGDUBPi1T6lNRIZ8DlZtuzs0dDso6SifHWuRic_HcFROD1gVbow9teB3FszkVBuRfTFdNAFSx5xfUhHluUwv-NSVczlSaxfCIQer6y9QdzRID88Wo_0-sw696Ow7SHalji9klD3lIL_8Xqb3dfia4nLLw%3D%3D",
+          "footnoteNumber": 7
+        }, {
+          "index": 3411,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGgJGyCXHAJ8wWf6tDX9jcqJJojaIxyxVtCKS0ntBqzC-U7-4WM6unXXWNFzQvLni0LaU-4OveLEhHDvGdAbMUa3JA1BS9wn8y25A-Vsb1E89caVv9UE6T-xpAvUAPM5ILsKaaCmGd7rSaNgnfdeWmJiL7-1dpGnI1cQS80IrT7Ywbi07mXswyu7_NfoHoqUfdSRqsk8zJz03nUwtM4zHCBFnPa",
+          "footnoteNumber": 8
+        }, {
+          "index": 3680,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEtVwoqlVbzJwWUwp3nIWIJ2HxQCFAUU4ox3Dl3C7kjQ0ZyLVQuZoj-OTZlFw0h3XPyJlNdOAaWspnQHJR85DPoUc4oFp-EAgupOgnbSdR7pb-SD8vcOUmOjAeut_z4Z2jWJRvtpUHS3aFq83m0nYoZ3ziFPEj2Wi_RzQ%3D%3D",
+          "footnoteNumber": 9
+        }, {
+          "index": 3804,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGgJGyCXHAJ8wWf6tDX9jcqJJojaIxyxVtCKS0ntBqzC-U7-4WM6unXXWNFzQvLni0LaU-4OveLEhHDvGdAbMUa3JA1BS9wn8y25A-Vsb1E89caVv9UE6T-xpAvUAPM5ILsKaaCmGd7rSaNgnfdeWmJiL7-1dpGnI1cQS80IrT7Ywbi07mXswyu7_NfoHoqUfdSRqsk8zJz03nUwtM4zHCBFnPa",
+          "footnoteNumber": 8
+        }, {
+          "index": 3983,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGgJGyCXHAJ8wWf6tDX9jcqJJojaIxyxVtCKS0ntBqzC-U7-4WM6unXXWNFzQvLni0LaU-4OveLEhHDvGdAbMUa3JA1BS9wn8y25A-Vsb1E89caVv9UE6T-xpAvUAPM5ILsKaaCmGd7rSaNgnfdeWmJiL7-1dpGnI1cQS80IrT7Ywbi07mXswyu7_NfoHoqUfdSRqsk8zJz03nUwtM4zHCBFnPa",
+          "footnoteNumber": 8
+        }, {
+          "index": 4106,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGa5zorT8WMz-u65WAsr5e0IKjgmntsiV52ZoLvVOFa9uMbi0HLuDsSHZz5qQSOBhsoATTluwwRroN55SSsGjdMmU9RtZEq0vZPAYw0kh03d6xwhl5J_g0D7S6mVOXV_26vgfFxZnmIlmqZ58qHizcmpuUjbSd4Jr2V6Q%3D%3D",
+          "footnoteNumber": 10
+        }, {
+          "index": 4306,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGNzxnplmn-S5Ta_gkxASQylyQB5vQiiVqKrS_s06dL1BNvwroFqKgMNXwcshwvsdYbsMgXiUWd75r9oH2Q0Y1jsjRpNxiiZ638fzBXKRWtCNl8R_vzpoGwIhMv7HBxcDPLCw5oFpE%3D",
+          "footnoteNumber": 11
+        }, {
+          "index": 4505,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "footnoteNumber": 4
+        }],
+        "webSearchQueries": ["Obsidian Excalidraw plugin", "Excalidraw for Obsidian features", "how to use Excalidraw in Obsidian", "Obsidian Excalidraw plugin tutorial"],
+        "groundingSources": [{
+          "referenceNumber": 1,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGmG9dZlumckWVmfR20dOfYw3HLF6eT6KFoMETqtWoTb076qr8cxV7zq4b-QEKa5UzlWCit7nDJWaz1DGmaYKgvIIgyEnlTRQipf6UASu83YoDrD0UsZIWOO3zouZrdMhaZn7kN-ZUQdZUrFcUfN5T9h0w%3D",
+          "title": "github.com"
+        }, {
+          "referenceNumber": 2,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQE62xkCCLxOPQ2dVM9QwV0UgGvqMf3C83J_PNV8xS2OZr9usnmrJBRLJ6nDE7qF4iKkR-awldTp8Xxph3ygUMwwdAQmjdOgPAwEL3NYMaqdeNE9p0VADbaj_9Lf3JUXMy3ckdx-HaFjTelMVRk0-Zl3_XFmCkk8ik85Y1U%3D",
+          "title": "obsidianstats.com"
+        }, {
+          "referenceNumber": 3,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQH9rqawIS_LdSAjGhlUHODdplHB9HEdRfEn7rrxxHy30JIdHRX-YKV-KIhjvjXft2lGwJh4xCxcQtaDu8-hrCEMykPpOKD1JShrQOIR1XRjteRSckpfisEqSc5CXNqBWiylY_TZZhhcm4RAqkp36syZwz6ByDoJpBSdtA%3D%3D",
+          "title": "youtube.com"
+        }, {
+          "referenceNumber": 4,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGii2hZETAiCW15t1iGFyk5pO1QRXivLs6OBoR_6tUms41mKJ3ZUdDePAAlLD8EFLU2dhOJ2lNRF4BryE-wEv_iN4zJKNDeMsz9iGQVWoRdSb2oKJGq8vn4ljh0ddYsXU326kWAn24%3D",
+          "title": "youtube.com"
+        }, {
+          "referenceNumber": 5,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGQ3bCJe-Ok8SJQZjf6Gpwz4YXjNDsNZSfMt4eNCnBy9s8ERTSkwlXnk5y120obHj_A5fu7iW48CQzHpcISgyNLkktAsfw1v6yARMFxwL6z2yCWBBxMhLiqLnG2t5pUfi7UhGgs3wCS_mCGbBGO7zkIaImelk7P1WlVq09AC2yCj79-oUVWiNEvH-EG4IE_qV1x7W30l_0lK1VT7RBJFBNbBmUodQtd606UQFkb",
+          "title": "excalidraw-obsidian.online"
+        }, {
+          "referenceNumber": 6,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQE1unrkz3QtY8owLOJBv_4FQ2b8Wts3q2VkC0tgvxikU3G-7iP_4OLOPZJBbuAx8CweJfDW_HnNHaKr0cVYVoqFrO-UfltU76ZgKIqw7ot5nZw74yBurql6wH5-HyK3AWI5iFFRAbt-zE-JYudmUe8eZ4c_sHAhpdlOKGY1kQnA1_gGVbOmCXdSQH05fs6fL8ZihOzkUv5cfnXkUMmxW1otXiCcRjk1IN60xLeK",
+          "title": "excalidraw-obsidian.online"
+        }, {
+          "referenceNumber": 7,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHe0SE3oUhH9DX2YIZE_IGt5k4druqDA8S9MyHPb-BpOyGDUBPi1T6lNRIZ8DlZtuzs0dDso6SifHWuRic_HcFROD1gVbow9teB3FszkVBuRfTFdNAFSx5xfUhHluUwv-NSVczlSaxfCIQer6y9QdzRID88Wo_0-sw696Ow7SHalji9klD3lIL_8Xqb3dfia4nLLw%3D%3D",
+          "title": "obsidian.md"
+        }, {
+          "referenceNumber": 8,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGgJGyCXHAJ8wWf6tDX9jcqJJojaIxyxVtCKS0ntBqzC-U7-4WM6unXXWNFzQvLni0LaU-4OveLEhHDvGdAbMUa3JA1BS9wn8y25A-Vsb1E89caVv9UE6T-xpAvUAPM5ILsKaaCmGd7rSaNgnfdeWmJiL7-1dpGnI1cQS80IrT7Ywbi07mXswyu7_NfoHoqUfdSRqsk8zJz03nUwtM4zHCBFnPa",
+          "title": "medium.com"
+        }, {
+          "referenceNumber": 9,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEtVwoqlVbzJwWUwp3nIWIJ2HxQCFAUU4ox3Dl3C7kjQ0ZyLVQuZoj-OTZlFw0h3XPyJlNdOAaWspnQHJR85DPoUc4oFp-EAgupOgnbSdR7pb-SD8vcOUmOjAeut_z4Z2jWJRvtpUHS3aFq83m0nYoZ3ziFPEj2Wi_RzQ%3D%3D",
+          "title": "youtube.com"
+        }, {
+          "referenceNumber": 10,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGa5zorT8WMz-u65WAsr5e0IKjgmntsiV52ZoLvVOFa9uMbi0HLuDsSHZz5qQSOBhsoATTluwwRroN55SSsGjdMmU9RtZEq0vZPAYw0kh03d6xwhl5J_g0D7S6mVOXV_26vgfFxZnmIlmqZ58qHizcmpuUjbSd4Jr2V6Q%3D%3D",
+          "title": "youtube.com"
+        }, {
+          "referenceNumber": 11,
+          "uri": "https://www.google.com/url?sa\u003dE\u0026q\u003dhttps%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGNzxnplmn-S5Ta_gkxASQylyQB5vQiiVqKrS_s06dL1BNvwroFqKgMNXwcshwvsdYbsMgXiUWd75r9oH2Q0Y1jsjRpNxiiZ638fzBXKRWtCNl8R_vzpoGwIhMv7HBxcDPLCw5oFpE%3D",
+          "title": "youtube.com"
+        }]
+      },
+      "finishReason": "STOP",
+      "tokenCount": 2,
+      "parts": [{
+        "text": "好的"
+      }, {
+        "text": "，這是有關 Obsidian 的 Excalidraw 插件的詳細說明。\n\n"
+      }, {
+        "text": "Excalidraw 是一款功能強大且廣受歡迎的社群插件，它將 Excalidraw 這"
+      }, {
+        "text": "套開源的虛擬白板（或稱手繪風格繪圖工具）無縫整合進 Obsidian 中"
+      }, {
+        "text": "。這讓使用者可以直接在自己的筆記庫 (Vault) 內建立、編輯和管理視覺化的圖表與"
+      }, {
+        "text": "筆記，實現了文字與視覺元素的完美結合。\n\n### **Excalidraw"
+      }, {
+        "text": " 插件的核心功能**\n\n1.  **原生整合與檔案管理**\n    *   **像筆記一樣管理"
+      }, {
+        "text": "：** Excalidraw 繪圖會以 `.excalidraw.md` 或 `.md` 的檔案"
+      }, {
+        "text": "格式直接儲存在你的 Obsidian 筆記庫中，你可以像管理一般 Markdown 筆記一樣，使用檔案"
+      }, {
+        "text": "總管來移動、重新命名或組織它們。\n    *   **無縫的工作流程：** "
+      }, {
+        "text": "插件深度整合了 Obsidian 的操作介面，包括命令面板 (Command Palette)、右鍵選單、檔案總管以及"
+      }, {
+        "text": "側邊欄按鈕，讓建立或開啟繪圖非常直觀。\n\n2.  **強"
+      }, {
+        "text": "大的連結與嵌入能力 (Linking \u0026 Embedding)**\n    *   **雙向連結：** 你可以在 Excalidraw "
+      }, {
+        "text": "畫布中，使用 `[[筆記名稱]]` 的語法，直接連結到 Obsidian 筆記庫"
+      }, {
+        "text": "中的任何一篇筆記或另一張繪圖。\n    *   **區塊引用 (Block Reference"
+      }, {
+        "text": ")：** 不僅可以連結整篇筆記，還能精確地引用筆記中的某個段落、"
+      }, {
+        "text": "標題或項目，並將其嵌入到畫布中。\n    *   **反向"
+      }, {
+        "text": "連結 (Backlinks)：** Obsidian 強大的反向連結功能同樣適用於 Excalidraw。你可以在筆"
+      }, {
+        "text": "記的反向連結面板中，看到有哪些繪圖引用了這篇筆記。\n    *   **"
+      }, {
+        "text": "嵌入繪圖到筆記中：** 你可以將整張繪圖或繪圖中的特定「群組」(Group)"
+      }, {
+        "text": " 嵌入到你的 Markdown 筆記中，只顯示你想呈現的部分。嵌入的圖像大小也可以自由調整。\n\n3.  **豐富的視覺化與互動功能**\n    *   **Markdown 嵌入：** 你"
+      }, {
+        "text": "可以將一篇完整的 Markdown 筆記內容嵌入到畫布中，它會以渲染後的樣式呈現，包括"
+      }, {
+        "text": "表格、程式碼區塊等。\n    *   **拖放支援：** 支援從"
+      }, {
+        "text": "各種地方拖放元素到畫布上，例如：\n        *   從檔案總管拖"
+      }, {
+        "text": "曳筆記，會自動生成連結。\n        *   拖放文字內容會變成畫布上的文字。\n        *"
+      }, {
+        "text": "   拖放網頁連結、YouTube 影片連結，會生成可點擊的連結或帶有預覽圖"
+      }, {
+        "text": "的影片。\n    *   **圖像與 PDF 整合：** 你可以插入本地或網路上的圖片，甚至"
+      }, {
+        "text": "能將 PDF 的某一頁匯入成圖片並在上面做註記。 "
+      }, {
+        "text": "這些註記可以連結回原始的 PDF 頁面。\n\n4.  **高度客製化與自動"
+      }, {
+        "text": "化**\n    *   **模板 (Templates)：** 可以建立繪圖模板，快速生成常用的圖表框架"
+      }, {
+        "text": "，例如會議記錄、心智圖等。\n    *   **腳本引擎 (Script Engine)：** "
+      }, {
+        "text": "這是 Excalidraw 最強大的功能之一。使用者可以安裝或撰寫腳本來自動化各種繪圖任務，"
+      }, {
+        "text": "例如：\n        *   將 Mermaid 語法轉換成圖表。\n        *   自動"
+      }, {
+        "text": "排列元素、生成圖表等。\n    *   **Excalidraw Automate API：** 提供了與 Templ"
+      }, {
+        "text": "ater、Dataview、QuickAdd 等其他強大插件協作的接口，可以實現非常複雜的自動化"
+      }, {
+        "text": "工作流程。\n\n### **為什麼要在 Obsidian 中使用 Excalidraw？**\n\n*   **視覺化"
+      }, {
+        "text": "思考：** 對於習慣視覺化思考的人來說，Excalidraw 提供了將抽象概念具象化的絕"
+      }, {
+        "text": "佳工具，例如繪製心智圖、流程圖、概念關係圖等。"
+      }, {
+        "text": "\n*   **混合式筆記：** Excalidraw 插件允許你建立「混合式筆記」("
+      }, {
+        "text": "Hybrid Notes)，也就是一篇筆記同時擁有文字和視覺兩種模式，可以隨時切換。就像一張紙的正"
+      }, {
+        "text": "反面，一面是手繪圖，另一面是詳細的文字說明。\n*   "
+      }, {
+        "text": "**提升記憶與理解：** 在筆記中加入圖表和草圖，可以顯著提升對複雜"
+      }, {
+        "text": "資訊的記憶和理解。\n*   **保持資料的本地化與隱私：** "
+      }, {
+        "text": "所有的繪圖檔案都儲存在你自己的設備上，與 Obsidian 的核心理念一致，確保了資料的隱私和"
+      }, {
+        "text": "所有權。\n\n### **如何開始使用**\n\n1.  **安裝插件：** 從"
+      }, {
+        "text": " Obsidian 的社群插件市集中搜尋 \"Excalidraw\" 並安裝。\n2.  **啟用插件"
+      }, {
+        "text": "：** 安裝後記得啟用它。\n3.  **建立新繪圖：** 你可以透過左"
+      }, {
+        "text": "側邊欄的按鈕、命令面板或在檔案總管中右鍵點擊來建立一個新的繪圖檔案"
+      }, {
+        "text": "。\n\n總而言之，Excalidraw 插件不僅僅是一個簡單的繪圖工具"
+      }, {
+        "text": "，它是一個能將 Obsidian 從純文字筆記軟體提升為強大視覺化知識管理系統的「"
+      }, {
+        "text": "思考 powerhouse」。 無論是 brainstorm、規劃流程、註記圖片，或是建立互動式的圖表，它"
+      }, {
+        "text": "都為 Obsidian 使用者開啟了全新的可能性。"
+      }]
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}
